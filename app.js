@@ -102,13 +102,15 @@ v. Preguntas Frecuentes</br>
 		let sumaRating = 0;
 		let movieTot = 0;
 
-		for(var j=0; j>movies.length; j++){
+		for(var j=0; j<movies.length; j++){
 
 			if (movies[j].vote_average >7){
 			movieTot ++;
-			masVot += `Titulo: ${movies[j].title}
-			Rating: ${movies[j].vote_average}
-			Sinopsis: ${movies[j].overview}`;
+			masVot += `Titulo: ${movies[j].title}</br>
+			Rating: ${movies[j].vote_average}</br>
+			Sinopsis: ${movies[j].overview}</br>
+			</br>`
+			;
 			sumaRating += movies[j].vote_average; 
 			}
 		}
@@ -118,6 +120,7 @@ v. Preguntas Frecuentes</br>
 			let	votadas= `Más votadas</br>
 			</br>
 			Total de peliculas:${movieTot}</br>
+			</br>
 			</br>
 			Rating Promedio:${promedio}</br>
 			</br>
